@@ -1,0 +1,48 @@
+Venue:
+  name: string
+  street_number: string
+  street: string
+  zip_code: string
+  neighborhood: string
+  city: string
+  state: string
+  latitude: string
+  longitude: string
+  picture: binary
+  dress_code: text
+  website_url: string
+  google_maps_url: string
+
+Offering:
+  venue_id: integer
+  day_of_week: string
+  opening_hours: string
+  specials: string
+  base_price_linecut: integer
+  price_increments: integer
+
+User:
+  username: string
+  email: string
+  password: string
+  first_name: string
+  last_name: string
+  birthday: string
+  gender: string
+  street_number: string
+  street: string
+  zip_code: string
+  city: string
+  state: string
+  credit_card_info: string
+  paypal_email: string
+
+Booking:
+  user_id: integer
+  offering_id: integer
+  linecut_date_time: datetime
+  booking_date_time: datetime
+  linecut_price: integer
+
+
+
