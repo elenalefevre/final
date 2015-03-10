@@ -1,0 +1,18 @@
+Venue:
+  name: string
+  street_number: string
+  street: string
+  zip: string
+  neighborhood: string
+  city_id: integer
+  state: string
+  latitude: string
+  longitude: string
+  image: binary
+  dress_code: string
+  hours: text
+  website_url: string
+  google_maps_url: string
+
+City:
+  name: string
