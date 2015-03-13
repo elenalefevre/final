@@ -5,7 +5,7 @@ class VenuesController < ApplicationController
   end
   
   def show
-  	@venues = Venue.find_by(id: params["id"])
+  	@venue = Venue.find_by(id: params["id"])
   end
 
   def new
