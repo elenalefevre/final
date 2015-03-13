@@ -1,9 +1,13 @@
 <h3 class="page-header">
   All Cities
+  <span class="pull-right">
+  	<%= link_to "New City", new_city_path, class: 'btn btn-sm btn-success' %>
+  </span>
 </h3>
 
 <ul>
   <% @cities.each do |city| %>
-    <li><%= city.name %></li>
+    <li><%= city.name %> <%= link_to "Edit", edit_city_path(city) %> <%= link_to "Delete", city_path(city), 
+    	method: :delete, data: { confirm: 'Are you sure you want to delete this city from the database?' } %></li>
   <% end %>
 </ul>

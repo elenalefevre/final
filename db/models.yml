@@ -1,3 +1,6 @@
+City:
+  name: string
+
 Venue:
   name: string
   street_number: string
@@ -13,6 +16,3 @@ Venue:
   hours: text
   website_url: string
   google_maps_url: string
-
-City:
-  name: string

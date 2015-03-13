@@ -1,28 +1,20 @@
 <h1 class="title">
-  Highline Ballroom
- </h1>
-
+  <%= @venue.name %>
+</h1>
 <div class="row">
   <div class="col-sm-12 col-md-4">
     <h2 class="subtitle"> 
     Address
     </h2>
-     <ul class="list-unstyled">
-      <li>431 West 16th Street</li>
-      <li>Chelsea</li>
-      <li>10011 New York City</li>
-    </ul>
+     <p>
+      <%= @venue.address %>
+    </p>
   </div>
   <div class="col-sm-12 col-md-4">
     <h2 class="subtitle"> 
     Dress Code
     </h2>
-    <p>
-    No strict dress code for Highline Ballroom's own events - clothing such as shorts, jeans, sneakers, and hats are permitted.
-    </p>
-    <p>
-    However: Private events and club nights may have their own dress code.
-    </p>
+    <p><%= @venue.dress_code %></p>
   </div>
   <div class="col-sm-12 col-md-4">
     <h2 class="subtitle"> 
@@ -30,32 +22,7 @@
     </h2>
     <table class="table table-striped table-bordered">
       <tr>
-        <td><strong>Monday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
-      </tr>
-      <tr>
-        <td><strong>Tuesday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
-      </tr>
-      <tr>
-        <td><strong>Wednesday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
-      </tr>
-      <tr>
-        <td><strong>Thursday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
-      </tr>
-      <tr>
-        <td><strong>Friday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
-      </tr>
-      <tr>
-        <td><strong>Saturday</strong></td>
-        <td>11:00 am – 4:00 am</td>
-      </tr>
-      <tr>
-        <td><strong>Sunday</strong></td>
-        <td>11:00 am – 11:00 pm</td>
+        <td><%= @venue.hours %></td>
       </tr>
     </table>
   </div>
@@ -63,5 +30,5 @@
 
 <div class="row">
 <div class="col-sm-12 col-md-4">
-  <p><img src="/assets/highlineballroom.jpg"></p>
+  <p><%= image_tag @venue.image %></p>
 </div>
