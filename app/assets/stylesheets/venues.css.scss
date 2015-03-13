@@ -13,6 +13,9 @@ h1.title {
 h2.subtitle {
   font-size: 15px;
 }
-thumbnail {
-  height: 510px;
-}
+.thumbnail {
+  height: 310px;
+  a > img {
+    height: 235px;
+  }
+	}
