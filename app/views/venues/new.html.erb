@@ -1,3 +1,14 @@
+<% if @venue.errors.any? %>
+  <div class="alert alert-warning">
+    <h2>Some errors kept this venue from being saved:</h2>
+    <ul>
+      <% @venue.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @venue do |form| %>
   <div class="form-group">
     <%= form.label :name %>

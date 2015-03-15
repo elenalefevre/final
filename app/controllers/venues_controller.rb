@@ -26,7 +26,11 @@ class VenuesController < ApplicationController
   	venue_params = params.require(:venue).permit(:name)
   	@venue = Venue.find_by(id: params["id"])
   	@venue.update(venue_params)
-  	redirect_to venues_path
+  	if @movie.valid?
+      redirect_to venues_path
+    else
+      render text: "Failed to update venue"
+    end
   end
 
   def destroy

@@ -16,3 +16,8 @@ Venue:
   hours: text
   website_url: string
   google_maps_url: string
+
+User:
+  name: string
+  email: string
+  password: string

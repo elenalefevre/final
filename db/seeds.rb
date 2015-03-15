@@ -21,4 +21,9 @@ highlineballroom = Venue.create(name: "Highline Ballroom", street_number: "431",
 socialtwentyfive = Venue.create(name: "Social Twenty Five", street_number: "25", street: "West Hubbard Street", zip: "60654", neighborhood: "River North", city_id: chicago.id, state: "IL", latitude: "41.889798", longitude: "87.629138,15", image: "socialtwentyfive.jpg", dress_code: "Dress to Impress", hours: "Monday	9:00 am – 5:00 pm, Tuesday	9:00 am – 5:00 pm, Wednesday	9:00 am – 5:00 pm, Thursday	9:00 am – 5:00 pm, Friday	9:00 am – 5:00 pm, Saturday	Closed, Sunday	Closed", website_url: "http://socialtwentyfive.com/", google_maps_url: "https://www.google.com/maps/place/Social+Twenty-Five/@41.889798,-87.629138,17z/data=!3m1!4b1!4m2!3m1!1s0x880e2cb1f752292b:0xe8f311a6489478d0")
 themid = Venue.create(name: "The Mid", street_number: "306", street: "North Halsted Street", zip: "60661", neighborhood: "West Loop", city_id: chicago.id, state: "IL", latitude: "41.887074", longitude: "87.647859", image: "themid.jpg", dress_code: "Dress to Impress – Collared Shirts Recommended, Strict Dress Code Rules Apply at Some Events: No Gym Shoes, No Hats, No Sports Attire, No Graphic Tees, No Shorts", hours: "Monday	10:00 pm – 4:00 am, Tuesday	Closed, Wednesday	Closed, Thursday	Closed, Friday	10:00 pm – 4:00 am, Saturday	10:00 pm – 5:00 am, Sunday	Closed", website_url: "http://www.themidchicago.com/", google_maps_url: "https://www.google.com/maps/place/The+Mid+Chicago/@41.887074,-87.647859,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0xd6b72b9256a5ff62")
 
-puts "There are now #{Venue.count} venues in #{City.count} cities in the database."
+# Create the users
+puts "Creating users..."
+User.create(name: "Erinn", email:"erinn.barr@kellogg.northwestern.edu", password: "unicornsandrainbows")
+User.create(name: "Brian", email:"b-eng@kellogg.northwestern.edu", password: "catvideosqareinthecomputer")
+
+puts "There are now #{User.count} users and #{Venue.count} venues in #{City.count} cities in the database."
