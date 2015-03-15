@@ -7,7 +7,7 @@
     Address
     </h2>
      <p>
-      <%= @venue.address %>
+      <%= @venue.street_number %> <%= @venue.street %>, <%= @venue.neighborhood %>, <%= @venue.zip %> <%= @venue.state %>
     </p>
   </div>
   <div class="col-sm-12 col-md-4">
@@ -27,7 +27,6 @@
     </table>
   </div>
 </div>
-
 <div class="row">
 <div class="col-sm-12 col-md-4">
   <p><%= image_tag @venue.image %></p>

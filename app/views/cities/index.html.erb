@@ -7,7 +7,7 @@
 
 <ul>
   <% @cities.each do |city| %>
-    <li><%= city.name %> <%= link_to "Edit", edit_city_path(city) %> <%= link_to "Delete", city_path(city), 
+    <li><%= link_to city.name, city %> <%= link_to "Edit", edit_city_path(city) %> <%= link_to "Delete", city_path(city), 
     	method: :delete, data: { confirm: 'Are you sure you want to delete this city from the database?' } %></li>
   <% end %>
 </ul>

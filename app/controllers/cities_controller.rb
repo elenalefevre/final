@@ -5,7 +5,8 @@ class CitiesController < ApplicationController
   end
 
   def show
-  	@cities = City.find_by(id: params["id"])
+  	@city = City.find_by(id: params["id"])
+    @venues = Venue.where(city_id: @city.id)  
   end
 
   def new
