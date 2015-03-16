@@ -15,8 +15,12 @@ class CitiesController < ApplicationController
 
   def create
   	city_params = params.require(:city).permit(:name)
-  	City.create(city_params)
-  	redirect_to cities_path
+    @city = City.create(city_params)
+    if @city.valid?
+      redirect_to cities_path, notice: "Cool!"
+    else 
+      render "new"
+    end
   end
 
   def edit

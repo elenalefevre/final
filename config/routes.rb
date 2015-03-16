@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   resources :cities
   resources :users
   resources :sessions
-  
+
+  get "/login", to: "sessions#new"
+  get "/logout", to: "sessions#destroy"
+
   root to: "venues#index"
 
   # The priority is based upon order of creation: first created -> highest priority.

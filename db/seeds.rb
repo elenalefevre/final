@@ -9,6 +9,7 @@
 puts "Deleting all records from the database..."
 City.delete_all
 Venue.delete_all
+User.delete_all
 
 # Create the cities
 puts "Creating cities..."
@@ -24,6 +25,6 @@ themid = Venue.create(name: "The Mid", street_number: "306", street: "North Hals
 # Create the users
 puts "Creating users..."
 User.create(name: "Erinn", email:"erinn.barr@kellogg.northwestern.edu", password: "unicornsandrainbows")
-User.create(name: "Brian", email:"b-eng@kellogg.northwestern.edu", password: "catvideosqareinthecomputer")
+User.create(name: "Brian", email:"b-eng@kellogg.northwestern.edu", password: "catvideosareinthecomputer")
 
 puts "There are now #{User.count} users and #{Venue.count} venues in #{City.count} cities in the database."

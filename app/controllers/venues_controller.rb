@@ -1,4 +1,5 @@
 class VenuesController < ApplicationController
+    skip_before_action :require_user, only: [:index, :show]
   
   def index
   	@venues = Venue.all
@@ -14,8 +15,12 @@ class VenuesController < ApplicationController
 
   def create
   	venue_params = params.require(:venue).permit(:name)
-  	Venue.create(venue_params)
-  	redirect_to venues_path
+    @venue = Venue.create(venue_params)
+    if @venue.valid?
+      redirect_to venues_path, notice: "Cool!"
+    else 
+      render "new"
+    end
   end
 
   def edit

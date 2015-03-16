@@ -20,4 +20,4 @@ Venue:
 User:
   name: string
   email: string
-  password: string
+  password_digest: string
